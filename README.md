@@ -6,9 +6,9 @@ The first section of the notebook: '**Dataset 1: Average Household Income in Los
 
 Run the first cell in this section, the table is scraped, data type updated to numeric for further analysis, and the data is stored in the dataframe df1. The original table is rather small with around 300 rows, and therefore it stops running and return the dataframe within 20 seconds.
 
-I run the second cell to convert the dataframe to csv and save it on my computer with this specific path.
+Run the second cell to convert the dataframe to csv and save it.
 
-Run the third cell to see the **sample output** of first 5 rows.
+Run the third cell to see the **sample output** of first 5 rows in the sample file.
 
 
 **DATASET 2**
@@ -17,11 +17,11 @@ Next section in this notebook is '**Dataset 2: Los Angeles County Restaurant Ins
 
 To retrieve the data from API, run the first cell in this section. '**resultRecordCount=1000**' in the url means it returns 1000 records. Modify this number from 1 to 1000 as you wish to retrieve certain number of records. '**resultOffset={offset}**' means you skip the first 1000 rows. Modify this number to retrieve records after that. 
 
-I set the offset 7 times to get the first 7000 records, update the datatype and store the data in the dataframe df2. If it returns 'Unable to perform query. Too many requests.', just wait for 60 seconds and rerun the cell as it has a limit of 6000 calls in one minute.
+I set the offset 7 times to get the first 7000 records, update the datatype and store the data in the dataframe df2. 
 
-Similar to dataset 1, I run the second cell to convert the dataframe to csv and save it in the same folder.
+Similar to dataset 1, I run the second cell to convert the dataframe to csv and save it. If it returns 'Unable to perform query. Too many requests.', just wait for 60 seconds and rerun the cell as it has a limit of 6000 calls in one minute.
 
-Run the third cell to see the **sample output** of first 5 rows.
+Run the third cell to see the **sample output** of first 5 rows in the sample file. Wait for 60 seconds if it returns 'Unable to perform query. Too many requests.'
 
 
 **DATASET 3**
@@ -38,8 +38,6 @@ What the third dataset do is to first drop any duplicate records, change zipcode
 
 Run the forth cell to select the rows with zipcode in the Dataset 1 and valid rating and price. Restaurants with rating of 0 and price of 0 are deleted from this dataset because they're not representative. The number of price is the number of dollar signs you see from Yelp, ranging from 1 to 4, meaning from cheap to expensive.
 
-Run the next cell to save the dataframe as csv in my computer.
+Run the next cell to save the dataframe as csv.
 
-Run the next cell to see the **sample output** of dataset 3.
-
-The final cell is the option cell as a **sample mode** to test the function of using Yelp API to download data, providing you with 50 restaurants in LA, which should take you no more than 3 seconds.
+The rest two cells are optional as a **sample mode** to test the function of using Yelp API to download data, providing you with 5 restaurants in LA. Run the final cell to save the sample output in a csv file.
