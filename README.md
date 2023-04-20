@@ -17,7 +17,7 @@ Next section in this notebook is '**Dataset 2: Los Angeles County Restaurant Ins
 
 To retrieve the data from API, run the first cell in this section. '**resultRecordCount=1000**' in the url means it returns 1000 records. Modify this number from 1 to 1000 as you wish to retrieve certain number of records. '**resultOffset={offset}**' means you skip the first 1000 rows. Modify this number to retrieve records after that. 
 
-I set the offset 7 times to get the first 7000 records, update the datatype and store the data in the dataframe df2. This step takes less than 5 seconds.
+I set the offset 7 times to get the first 7000 records, update the datatype and store the data in the dataframe df2. If it returns 'Unable to perform query. Too many requests.', just wait for 60 seconds and rerun the cell as it has a limit of 6000 calls in one minute.
 
 Similar to dataset 1, I run the second cell to convert the dataframe to csv and save it in the same folder.
 
